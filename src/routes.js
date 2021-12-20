@@ -1,6 +1,6 @@
 const {Router} = require ('express');//const req = require('express/lib/request');
 
-const DevController = require ('./controllers/DevController');// ele colocou controllers mas parece ser apenas 
+const DevController = require ('./controllers/DevController');
 const SearchController = require('./controllers/SearchController');
 
 const routes = Router();

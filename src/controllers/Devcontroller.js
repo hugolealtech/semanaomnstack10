@@ -23,7 +23,7 @@ module.exports = { //essa função não retornou a lista de devs no insomnia.
             
             console.log(name, avatar_url,bio, github_username);
             
-                const techsArray =  techs.split(',').map(techs => techs.trim ());
+                const techsArray = /*parseStringAsArray(techs)*/ techs.split(',').map(tech => tech.trim ());//tudo funcionava ate aqui. 01:24:02
             
                 const location = {
                     type : 'Point',
