@@ -1,19 +1,5 @@
-main{
-  flex: 1;
-}
-main ul{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  list-style: none;
-}
-@media (max-width:650px){
-  main ul{
-    grid-template-columns: 1fr;
-  }
-}
 
-/*li.dev-item{
+li.dev-item{
   background: #FFF;
   box-shadow: 0 0 14px 0 rgb(0,0,0,0.02);
   padding: 20px;
@@ -59,4 +45,4 @@ li.dev-item a{
 
 li.dev-item a:hover{
   color: #5a2ea6
-}*/
+}

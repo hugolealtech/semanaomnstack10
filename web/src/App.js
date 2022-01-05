@@ -1,10 +1,14 @@
 import React, { useState,useEffect} from "react";
 import api from './services/api';
+import './componentes/DevItem/styles.css';
 
 import './global.css';
 import './App.css';
 import './Sidebar.css';
 import './Main.css';
+
+import DevItem from "./componentes/DevItem";
+
 
   function App(){
     const [devs, setDevs] = useState([]);
@@ -123,32 +127,12 @@ async function handleAddDev(e){
         <main> 
           <ul>
             {devs.map(dev =>(
+              <DevItem key={dev._id} dev={dev}/>              
 
-              <li key={dev._} className="dev-item">
-              <header>
-                <img src={dev.avatar_url} alt={dev.name}/>
-                <div className="user-info">
-                  <strong>{dev.name}</strong>
-                  <span>{dev.techs.join(', ')}</span>
-                </div>  
-              </header>
-              <p>{dev.bio}</p>
-              <a href={`https://github.com/${dev.github_username}`}>Acessar perfil no Github</a>
-            </li>
-
-            ))}
-            
-
-          
+            ))}           
           </ul>
-
-        </main>
-      
-
-
-       
+        </main>       
       </div>
-
     );
   }
 export default App;
